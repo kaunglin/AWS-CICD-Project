@@ -2,10 +2,10 @@
 set -e
 
 # Pull the Docker image from Docker Hub
-docker pull sreedhar8897/hotel-app:latest
+docker pull kaung7777/hotel-app:latest
 
 echo "Checking for existing container on port 80..."
-existing_container=$(docker ps --filter "ancestor=sreedhar8897/hotel-app:latest" -q)
+existing_container=$(docker ps --filter "ancestor=kaung7777/hotel-app:latest" -q)
 
 if [ -n "$existing_container" ]; then
   echo "Stopping existing container..."
@@ -15,4 +15,4 @@ if [ -n "$existing_container" ]; then
 fi
 
 # Run the Docker image as a container
-docker run -dit -p 80:80 sreedhar8897/hotel-app
+docker run -dit -p 80:80 kaung7777/hotel-app
